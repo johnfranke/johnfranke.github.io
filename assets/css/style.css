@@ -52,19 +52,17 @@
     background-color: white;
     border: 1px solid #dddddd; 
     padding: 16.5px;
-    position: relative;
-    top: 25px;
     height: 100%;
+    margin: 30px 0px 100px 0px;
 
 }
 #portfolio {
     background-color: white;
     border: 1px solid #dddddd; 
-    padding: 16.5px;
-    position: relative;
-    top: 25px;
+    padding: 16px;
     overflow: auto;
-    width: 960px;
+    width: 926px;
+    margin: 30px 0px 100px 0px;
 
 }
 #title{
