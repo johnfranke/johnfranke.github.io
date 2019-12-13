@@ -1,4 +1,4 @@
-# homework01
-My First Homework
+# homework02
+My Second Homework 
 
-This is my first homework assignment for KU Coding Bootcamp. This is an example of a portfolio website. I used html and css to create it.
+This is an updated homework 1. For homework 1 I created a website portfolio. In this project I recreated the portfolio with Bootstrap using grids and a navbar. I also made the website mobile friendly.

@@ -4,55 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <title>John Franke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no"">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+
+    <style>
+    
+
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="centralized-box">
-            <div id="name">John Franke</div>
-            <div class="nav"><a href="contact.html">Contact</a></div>
-            <div class="nav"><a href="portfolio.html">Portfolio</a></div>
-            <div class="nav"><a href="index.html">About</a></div>
-        </div>
-    </div>
 
-    <div id="main">
-        <div class="centralized-box">
-
-            <div id="bio">
-                <div id="title">
-                Contact
-                </div>
-                <div>
-                    <br>
-                    <form>
-                            <label for="cname"><p>Name</p></label>
-                            <input type="text" id="cname" name="cname">
-                            <label for="cemail"><p>Email</p></label>
-                            <input type="text" id="cemail" name="cemail">
-                            <label for="cmessage"><p>Message</p></label>
-                            <input type="text" id="cmessage" name="cmessage">
-                            <br>
-                            <br>
-                            <input type="submit" value="Submit">
-                    </form>
-
-
-
-                </div>
+    <div class="container-fluid  m-0 p-0">
+        <div class="row bg-white border-bottom m-0 p-0">
+            <div class="col-md-1">
             </div>
-
+            <div class="col-md-3  m-0 p-0 b-0  bg-info">
+               <p class="p-2 mb-2 bg-info text-white text-center m-0 p-0 b-0 name">John Franke</p> 
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-3 d-flex justify-content-center  m-0 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                
+                    <div class="collapse navbar-collapse text-nowrap" id="navbarSupportedContent">
+                      <ul class="navbar-nav flex-row">
+                          <a class="nav-link p-2" href="index.html">About</a>&nbsp;
+                          <a class="nav-link p-2" href="portfolio.html">Portfolio</a>&nbsp;
+                          <a class="nav-link p-2" href="contact.html">Contact</a>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div class="col-md-1">
+            </div>
         </div>
+
+        <div class="row m-1">
+                <div class="jumbotron mx-auto rounded-0 col-md-10">
+                        <h1 class="text-info title">Contact</h1>
+                        <hr class="my-4 border-0 justify-content-center mx-auto">
+                        <form>
+                                <div class="form-group">
+                                        <label for="exampleFormControlInput1">Your Name</label>
+                                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                                      </div>
+                                <div class="form-group">
+                                  <label for="exampleFormControlInput1">Email address</label>
+                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleFormControlTextarea1">Your Message</label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-auto my-1">
+                                        <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                        </form>
+                <div class="col-md-2">
+
+                </div>
+        </div>
+
+        <nav class="navbar fixed-bottom navbar-light d-flex justify-content-center m-0 p-0 footer align-text-bottom" style="background-color: 666666;">
+                Copyright ©
+              </nav>
+
     </div>
 
-    <div id="footer">
-        <br>
-        <br>
-        <br>
-        Copyright ©
-    </div>
+
 </body>
-
 </html>
