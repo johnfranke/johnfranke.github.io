@@ -191,7 +191,7 @@ function wrongAnswer() {
             // var highScoreList = document.getElementById("highscoreslist");
             // highScoreList.remove();
           } else {
-               $('#highscoreslist').appendChild("<p>", initials + " ............... Score: ", + score, "</p>");
+               $('#highscoreslist').append("<p>", initials + " ............... Score: ", + score, "</p>");
 
           }
       }
