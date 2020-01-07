@@ -1,131 +1,216 @@
-var specialCharArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
-
-var numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-var lowerCharArray = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z"
-];
-
-var upperCharArray = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z"
-];
-
- 
-var length = prompt("How many characters do you want your password to be?");
-	if (length > 7 && length < 129) {
-	console.log(length);
-	var specialChar = confirm("Do you want special characters in your password?");
-	console.log(specialChar);
-	var numberChar = confirm("Do you want numbers in your password?");
-	console.log(numberChar);
-	var lowerChar = confirm("Do you want lowercase letters in your password?");
-	console.log(lowerChar);
-	var upperChar = confirm("Do you want uppercase letters in your password?");
-	console.log(upperChar);
-	
-	var password = [""];
-	for (var i = 0; i < length; i++) {
-		if (lowerChar === true) {
-		var randomLowerChar =
-			lowerCharArray[Math.floor(Math.random() * lowerCharArray.length)];
-		}
-		if (numberChar === true) {
-		var randomNumber = Math.floor(Math.random() * numberArray.length);
-		}
-		if (upperChar === true) {
-		var randomUpperChar =
-			upperCharArray[Math.floor(Math.random() * upperCharArray.length)];
-		}
-		if (specialChar === true) { 
-		var randomSpecialChar =
-			specialCharArray[Math.floor(Math.random() * specialCharArray.length)];
-		}
-		password.push(randomUpperChar);
-	
-		password.push(randomLowerChar);
-	
-		password.push(randomNumber);
-	
-		password.push(randomSpecialChar);
-	}
-	
-	password = password.join("").slice(0,length)
-	console.log("Password is " + password);
-	console.log("password length is " + password.length);
-
-	if (password.length === 0) {
-		alert('You must choose at least one character type.');
-		location.reload();
-	}
-	
-	
-	document.getElementById("thepassword").value = password;
-
-	function myFunction() {
-			var copyText = document.getElementById("thepassword");
-		copyText.select();
-		copyText.setSelectionRange(0, 99999)
-		document.execCommand("copy");
-		alert("Copied the text: " + copyText.value);
-	  }
+var questions = [
+    {
+        questionTitle: "Commonly used data types DO NOT include:",
+        choice1: "strings",
+        choice2: "booleans",
+        choice3: "alerts",
+        choice4: "numbers",
+        correct: "C"
+    },
+    {
+        questionTitle: "The condition in an if / else statement is enclosed within ____.",
+        choice1: "quotes",
+        choice2: "curly brackets",
+        choice3: "parentheses",
+        choice4: "square brackets",
+        correct: "C"
+    },
+    {
+        questionTitle: "Arrays in Javascript can be used to store ____.",
+        choice1: "number and strings",
+        choice2: "other arrays",
+        choice3: "booleans",
+        choice4: "all of the above",
+        correct: "D"
+    },
+    {
+        questionTitle: "String values must be enclosed within ____ when being assigned to variables.",
+        choice1: "commas",
+        choice2: "curly brackets",
+        choice3: "quotes",
+        choice4: "parenthese",
+        correct: "C"
+    },
+    {
+        questionTitle: "A very useful tool in development and debugging for printing content to the debugger",
+        choice1: "JavaScript",
+        choice2: "terminal/bash",
+        choice3: "for loops",
+        choice4: "console.log",
+        correct: "D"
+    }
+]
 
 
+var start = document.querySelector("#start");
+var sec = 75;
+var quiz = document.querySelector("#quiz");
+var thetime = document.querySelector("#thetime");
+var viewHighscores = document.querySelector("#viewhighscores")
+var questionTitle = document.querySelector("#title");
+var choice1 = document.querySelector("#A");
+var choice2 = document.querySelector("#B");
+var choice3 = document.querySelector("#C");
+var choice4 = document.querySelector("#D");
+var correctIncorrect = document.querySelector("#rightorwrong");
+var addInitials = document.querySelector("#addinitials");
+var highScores = document.querySelector('#highscores');
+var clearHighscores = document.querySelector('#clearhighscores-button');
+var goBack = document.querySelector('#goback-button');
+var topRow = document.querySelector('#toprow');
+var highScoreList = document.querySelector('#highscoreslist');
 
-	} else {
-		alert('You must enter a length between 8 and 128');
-		location.reload();
-	}
+var lastQuestionIndex = questions.length - 1;
+var currentQuestionIndex = 0;
+const questionTime = 15;
+var count = 75;
+var score = 0;
+var TIMER;
 
-	function refreshPage() {
-        window.location.reload();
-    } 
+
+function showQuestion() {
+    var currentQ = questions[currentQuestionIndex];
+    title.innerHTML = "<h4>" + currentQ.questionTitle + "</h4>";
+    choice1.innerHTML = currentQ.choice1;
+    choice2.innerHTML = currentQ.choice2;
+    choice3.innerHTML = currentQ.choice3;
+    choice4.innerHTML = currentQ.choice4;
+    console.log(score);
+}
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec;
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        showScore();
+    }
+}
+
+start.addEventListener("click", startQuiz);
+
+function startQuiz() {
+    start.style.display = "none";
+    myTimer()
+    time = setInterval(myTimer, 1000);
+    showQuestion();
+    quiz.style.display = "block";
+
+}
+
+function checkAnswer(answer){
+    if( answer === questions[currentQuestionIndex].correct){
+        // answer is correct
+        score += 5;
+        correctAnswer();
+    }else{
+        // answer is wrong
+        sec -= 15;
+         wrongAnswer();
+    }
+    count = 0;
+    if(currentQuestionIndex < lastQuestionIndex){
+        currentQuestionIndex++;
+        showQuestion();
+    }else{
+        // end the quiz and show the score
+        clearInterval(time);
+        showScore();
+    }
+}
+
+
+function showScore(){
+    quiz.style.display = "none";
+    start.style.display = "none";
+    topRow.style.display = "none";
+    scoreContainer.style.display = "block";
+    document.getElementById('finalscore').innerHTML = score;
+}
+
+
+function correctAnswer() {
+    var removeAfter = 0;
+        $('#rightorwrong').append("<p>" + 'Right!' + "</p>");
+        removeAfter += 600;
+        (function (removeAfter) {
+            setTimeout(function () {
+                $("#rightorwrong").children().last().remove();
+            }, removeAfter);
+        })(removeAfter);
+    }
+
+
+function wrongAnswer() {
+    var removeAfter = 0;
+        $('#rightorwrong').append("<p>" + 'Wrong!' + "</p>");
+        removeAfter += 600;
+        (function (removeAfter) {
+            setTimeout(function () {
+                $("#rightorwrong").children().last().remove();
+            }, removeAfter);
+        })(removeAfter);
+    }
+
+    addInitials.addEventListener("click", function(event) {
+        event.preventDefault();
+      
+        var initials = document.querySelector("#initials").value;
+        
+        if (initials === "") {
+          alert("Initials cannot be blank");
+
+        } else {
+
+          localStorage.setItem("initials", initials);
+          localStorage.setItem("score", score);
+          showHighscores();
+        }
+        console.log(initials);
+        console.log(score);
+
+      });
+
+      function showHighscores() {
+        quiz.style.display = "none";
+        scoreContainer.style.display = "none";
+        thetime.style.display = "none";
+        viewHighscores.style.display = "none";
+        start.style.display = "none";
+        topRow.style.display = "none";
+        highScores.style.display = "block";
+        
+        var initials = localStorage.getItem("initials");
+        var score = localStorage.getItem("score");
+
+        console.log(initials);
+        console.log(score);
+
+        if (localStorage.value = "") {
+            document.getElementById("highscoreslist").innerHTML = "";
+            // var highScoreList = document.getElementById("highscoreslist");
+            // highScoreList.remove();
+          } else {
+               $('#highscoreslist').appendChild("<p>", initials + " ............... Score: ", + score, "</p>");
+
+          }
+      }
+
+      clearHighscores.addEventListener("click", function(event) {
+        localStorage.clear();
+        document.getElementById("highscoreslist").innerHTML = "";
+
+      });
+
+      goBack.addEventListener("click", function(event) {
+        event.preventDefault();
+        showQuestion()
+      
+     
+      });
+
+      viewHighscores.addEventListener("click", function(event) {
+            showHighscores()
+                 
+     
+      });

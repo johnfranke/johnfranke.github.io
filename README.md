@@ -1,12 +1,10 @@
-# Password Generator
+# Code Quiz 
 
 ## Description
-This is a password generator I created by using JavaScript, HTML, and CSS. 
+This is a code quiz I created by using JavaScript, HTML, and Bootstrap/CSS. 
 
-The user is promted with 'How many characters do you want your password to be?' If the user selects any amount less than 8 or greater than 128, an alert shows the message 'You must enter a length between 8 and 128. After clicking ok to the alert, the page asks the user how many characters they want again.
+The user is promted with a landing screen that welcomes them to the code and invites them to click the start button to begin the quiz. Once clicked the time starts counting down from 75. If the user gets the question correctly five points will be added to their score. If the user answers the question incorrectly they will loose 15 secounds from their time. Depending on whether the user answers the question correctly or incorrectly, the user will see 'Right!' or 'Wrong!' pop up under the questions then quickly dissappear. 
 
-After that it prompts the user to ask if they would like special characters, numbers, lowercase characters, and/or uppercase characters in their password. If the user declines all characters, it will alert the user 'You must choose at least one character type' After clicking ok to the alert, the user will now see the first prompt 'How many characters do you want your password to have?'
+After the user had answered all 5 questions they will see their final score and be prompted to add their initials to the High Scores list. They may input their initials and hit sumbit. Upon submitting their initials they will be directed to the high scores and see their initials with their score added to it. The user then has two options, they can click on the clear high scores button which clears the high scores or they can click the 'back' button to go back to the beginning 'start' screen.
 
-If the user selects one or more character types and a length between 8 and 128 a random password with the selected character type(s) and selected length will be generated. The password will populate in the blue input field. 
-
-The user can then click the button below the password labeled 'Copy to Clipboard' to copy the password to their clipboard. If the user would like to generate another password, they may do so by clicking the 'Generate Password' button below the input field.
+You may view the quiz here: https://johnfranke.github.io/
