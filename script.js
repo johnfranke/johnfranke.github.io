@@ -100,11 +100,11 @@ function startQuiz() {
 
 function checkAnswer(answer){
     if( answer === questions[currentQuestionIndex].correct){
-        // answer is correct
+
         score += 5;
         correctAnswer();
     }else{
-        // answer is wrong
+
         sec -= 15;
          wrongAnswer();
     }
@@ -113,7 +113,7 @@ function checkAnswer(answer){
         currentQuestionIndex++;
         showQuestion();
     }else{
-        // end the quiz and show the score
+
         clearInterval(time);
         showScore();
     }
@@ -186,10 +186,9 @@ function wrongAnswer() {
         console.log(initials);
         console.log(score);
 
-        if (localStorage.value = "") {
-            document.getElementById("highscoreslist").innerHTML = "";
-            // var highScoreList = document.getElementById("highscoreslist");
-            // highScoreList.remove();
+        if (initials === null) {
+            console.log('nothing here');
+            $('#highscoreslist').append(" No Highscores Yet! ");
           } else {
                $('#highscoreslist').append("<p>", initials + " ............... Score: ", + score, "</p>");
 
