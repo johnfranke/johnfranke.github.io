@@ -1,10 +1,9 @@
-# Code Quiz 
+# Work Day Scheduler
 
-## Description
-This is a code quiz I created by using JavaScript, HTML, and Bootstrap/CSS. 
+# Description
 
-The user is promted with a landing screen that welcomes them to the code and invites them to click the start button to begin the quiz. Once clicked the time starts counting down from 75. If the user gets the question correctly five points will be added to their score. If the user answers the question incorrectly they will loose 15 secounds from their time. Depending on whether the user answers the question correctly or incorrectly, the user will see 'Right!' or 'Wrong!' pop up under the questions then quickly dissappear. 
+This is a work day scheduler. This app allows a user to input text into a certain hour of the day.  The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.). Once text is entered, the user will click the 'save' button and their input will be stored in 'localStorage', allowing the text to persist when the application is refreshed. If the user wants to delete an event, they can by deleting their input and clicking the 'save' button.
 
-After the user had answered all 5 questions they will see their final score and be prompted to add their initials to the High Scores list. They may input their initials and hit sumbit. Upon submitting their initials they will be directed to the high scores and see their initials with their score added to it. The user then has two options, they can click on the clear high scores button which clears the high scores or they can click the 'back' button to go back to the beginning 'start' screen.
+The current day and time is displayed near the top of the calendar. Also, each timeblock is color coded to indicate whether it is in a past, present, or future hour.
 
-You may view the quiz here: https://johnfranke.github.io/
+You can view the deployed application here: https://johnfranke.github.io/

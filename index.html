@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" />
-    <title>Coding Quiz Challenge</title>
+    <title>Work Day Scheduler</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
@@ -13,127 +13,104 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row" id="toprow">
-            <div class="col-md-2"></div>
-            <div class="col-md-2 text-center" id="viewhighscores">View Highscores</div>
-            <div class="col-md-4"></div>
-            <div class="col-md-2 text-center" id="thetime">
-                Time : <span id="timer">75</span>
-
-            </div>
-            <div class="col-md-2"></div>
+      <div class="row col-12-md">
+        <div class="jumbotron w-100">
+          <div class="container text-center">
+            <h1 class="display-3">Work Day Scheduler</h1>
+            <p class="lead">A simple calendar app for scheduling your work day</p>
+            <p id="today" class="lead"></p><br>
+          </div>
         </div>
+      </div>
 
-        <div id="start" class="col-md-12 text-center m-2 align-middle">
-            <h1>Coding Quiz Challenge</h1>
-            <span>Start the coding quiz by clicking the button below</span>
-            <br>
-            <button type="button" class="btn btn-primary btn-lg m-3" id="start">Start Quiz</button>
+      <div class="row hour">
+        <div class="col-1">
         </div>
-
-        <div id="quiz" style="display: none;">
-            <div class="row">
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-8 text-center">
-                    <div id="title">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-8">
-                    <div id="choices">
-                        <div class="choice btn btn-primary btn-sm m-1" id="A" onclick="checkAnswer('A')">A</div>
-                        <br>
-                        <div class="choice btn btn-primary btn-sm m-1" id="B" onclick="checkAnswer('B')">B</div>
-                        <br>
-                        <div class="choice btn btn-primary btn-sm m-1" id="C" onclick="checkAnswer('C')">C</div>
-                        <br>
-                        <div class="choice btn btn-primary btn-sm m-1" id="D" onclick="checkAnswer('D')">D</div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-
-                </div>
-            </div>
+        <div class="col-2 time-area hr1">9:00 AM</div>
+        <textarea class="col-7 text9"></textarea>
+        <button type="button" class="btn btn-default btn-lg text-center btn9">
+          <span class="btn9"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour">
+        <div class="col-1">
         </div>
-
-        <div id="scoreContainer" style="display: none;" class="text-center m-2">
-            <div class="row mx-auto">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <h2>You have completed the quiz!</h2>
-                    <br>
-                    <p>Your final score is: <span id="finalscore"></span></p>
-                    <br>
-                    <form class="form-inline justify-content-center align-items-center">
-                        <div class="form-group mx-sm-3 mb-2 justify-content-center align-items-center">
-                            <input class="form-control text-center justify-content-center align-items-center"
-                                id="initials" placeholder="Enter Your Initials Here">
-                        </div>
-                        <button id="addinitials" type="submit"
-                            class="btn btn-primary mb-2 justify-content-center align-items-center">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
+        <div class="col-2 time-area hr2">10:00 AM</div>
+        <textarea class="col-7 text10"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn10">
+          <span class="btn10"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
         </div>
-
-        <div id="highscores" style="display: none;" class="text-center p-10">
-            <div class="row">
-
-                <div class="col-md-2">
-
-                </div>
-
-                <div class="col-md-8">
-                    <h2>Highscores</h2><br><br>
-                </div>
-                <div class="col-md-2">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-                    <div id="highscoreslist">
-
-                    </div><br><br>
-                    <button id="clearhighscores-button" type="submit" class="btn btn-primary mb-2">Clear High
-                        Score</button>
-                    <button id="goback-button" onclick="location.reload();" type="submit"
-                        class="btn btn-primary mb-2">Go
-                        Back</button>
-                </div>
-                <div class="col-md-4">
-
-                </div>
-            </div>
+        <div class="col-2 time-area hr3">11:00 AM</div>
+        <textarea class="col-7 text11"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn11">
+          <span class="btn11"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
         </div>
-
-        <div id="rightorwrong" class="text-center">
-
+        <div class="col-2 time-area hr4">12:00 PM</div>
+        <textarea class="col-7 text12"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn12">
+          <span class="btn12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
         </div>
+        <div class="col-2 time-area hr5">1:00 PM</div>
+        <textarea class="col-7 text1"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn1">
+          <span class="btn1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
+        </div>
+        <div class="col-2 time-area hr6">2:00 PM</div>
+        <textarea class="col-7 text2"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn2">
+          <span class="btn2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
+        </div>
+        <div class="col-2 time-area hr7">3:00 PM</div>
+        <textarea class="col-7 text3"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn3">
+          <span class="btn3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
+        </div>
+        <div class="col-2 time-area hr8">4:00 PM</div>
+        <textarea class="col-7 text4"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn4">
+          <span class="btn4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
+      <div class="row hour col-12-md">
+        <div class="col-1">
+        </div>
+        <div class="col-2 time-area hr9">5:00 PM</div>
+        <textarea class="col-7 text5"></textarea>
+        <button type="button" class="btn btn-default btn-lg btn5">
+          <span class="btn5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+        </button>
+      </div>
 
 
-
-
-
-
+ 
     </div>
-
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="moment.js"></script>
     <script src="script.js"></script>
 
 </body>

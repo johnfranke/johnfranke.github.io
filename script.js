@@ -1,215 +1,135 @@
-var questions = [
-    {
-        questionTitle: "Commonly used data types DO NOT include:",
-        choice1: "strings",
-        choice2: "booleans",
-        choice3: "alerts",
-        choice4: "numbers",
-        correct: "C"
-    },
-    {
-        questionTitle: "The condition in an if / else statement is enclosed within ____.",
-        choice1: "quotes",
-        choice2: "curly brackets",
-        choice3: "parentheses",
-        choice4: "square brackets",
-        correct: "C"
-    },
-    {
-        questionTitle: "Arrays in Javascript can be used to store ____.",
-        choice1: "number and strings",
-        choice2: "other arrays",
-        choice3: "booleans",
-        choice4: "all of the above",
-        correct: "D"
-    },
-    {
-        questionTitle: "String values must be enclosed within ____ when being assigned to variables.",
-        choice1: "commas",
-        choice2: "curly brackets",
-        choice3: "quotes",
-        choice4: "parenthese",
-        correct: "C"
-    },
-    {
-        questionTitle: "A very useful tool in development and debugging for printing content to the debugger",
-        choice1: "JavaScript",
-        choice2: "terminal/bash",
-        choice3: "for loops",
-        choice4: "console.log",
-        correct: "D"
-    }
-]
+//This gets the current day to show in the jumbotron
+var today = document.querySelector("#today");
+today.textContent = moment().format('dddd MMMM Do YYYY, h:mm:ss a');
+
+// This lets the user enter text into the text areas and saves it to local storage
+$(".btn9").on("click", function() {
+    var entertext = $(".text9").val();
+    localStorage.setItem("9:00", entertext);
+});
+// This gets the content from local storage for each text area
+$(".text9").val(localStorage.getItem("9:00"));
+
+$(".btn10").on("click", function() {
+    var entertext = $(".text10").val();
+    localStorage.setItem("10:00", entertext);
+});
+$(".text10").val(localStorage.getItem("10:00"));
+
+$(".btn11").on("click", function() {
+    var entertext = $(".text11").val();
+    localStorage.setItem("11:00", entertext);
+});
+$(".text11").val(localStorage.getItem("11:00"));
+
+$(".btn12").on("click", function() {
+    var entertext = $(".text12").val();
+    localStorage.setItem("12:00", entertext);
+});
+$(".text12").val(localStorage.getItem("12:00"));
+
+$(".btn1").on("click", function() {
+    var entertext = $(".text1").val();
+    localStorage.setItem("1:00", entertext);
+});
+$(".text1").val(localStorage.getItem("1:00"));
+
+$(".btn2").on("click", function() {
+    var entertext = $(".text2").val();
+    localStorage.setItem("2:00", entertext);
+});
+$(".text2").val(localStorage.getItem("2:00"));
+
+$(".btn3").on("click", function() {
+    var entertext = $(".text3").val();
+    localStorage.setItem("3:00", entertext);
+});
+$(".text3").val(localStorage.getItem("3:00"));
+
+$(".btn4").on("click", function() {
+    var entertext = $(".text4").val();
+    localStorage.setItem("4:00", entertext);
+});
+$(".text4").val(localStorage.getItem("4:00"));
+
+$(".btn5").on("click", function() {
+    var entertext = $(".text5").val();
+    localStorage.setItem("5:00", entertext);
+});
+$(".text5").val(localStorage.getItem("5:00"));
 
 
-var start = document.querySelector("#start");
-var sec = 75;
-var quiz = document.querySelector("#quiz");
-var thetime = document.querySelector("#thetime");
-var viewHighscores = document.querySelector("#viewhighscores")
-var questionTitle = document.querySelector("#title");
-var choice1 = document.querySelector("#A");
-var choice2 = document.querySelector("#B");
-var choice3 = document.querySelector("#C");
-var choice4 = document.querySelector("#D");
-var correctIncorrect = document.querySelector("#rightorwrong");
-var addInitials = document.querySelector("#addinitials");
-var highScores = document.querySelector('#highscores');
-var clearHighscores = document.querySelector('#clearhighscores-button');
-var goBack = document.querySelector('#goback-button');
-var topRow = document.querySelector('#toprow');
-var highScoreList = document.querySelector('#highscoreslist');
+// Selecting the hours and converting them into a number
 
-var lastQuestionIndex = questions.length - 1;
-var currentQuestionIndex = 0;
-const questionTime = 15;
-var count = 75;
-var score = 0;
-var TIMER;
+var hr1 = document.querySelector(".hr1").textContent;
+hr1 = parseInt(hr1[0]);
+console.log(hr1)
 
+var hr2 = document.querySelector(".hr2").textContent;
+hr2 = parseInt(hr2[1]) + 10;
+console.log(hr2)
 
-function showQuestion() {
-    var currentQ = questions[currentQuestionIndex];
-    title.innerHTML = "<h4>" + currentQ.questionTitle + "</h4>";
-    choice1.innerHTML = currentQ.choice1;
-    choice2.innerHTML = currentQ.choice2;
-    choice3.innerHTML = currentQ.choice3;
-    choice4.innerHTML = currentQ.choice4;
-    console.log(score);
-}
+var hr3 = document.querySelector(".hr3").textContent;
+hr3 = parseInt(hr3[1]) + 10;
+console.log(hr3)
 
-function myTimer() {
-    document.getElementById('timer').innerHTML = sec;
-    sec--;
-    if (sec == -1) {
-        clearInterval(time);
-        showScore();
-    }
-}
+var hr4 = document.querySelector(".hr4").textContent;
+hr4 = parseInt(hr4[1]) + 10;
+console.log(hr4)
 
-start.addEventListener("click", startQuiz);
+var hr5 = document.querySelector(".hr5").textContent;
+hr5 = parseInt(hr5[0]) + 12;
+console.log(hr5)
 
-function startQuiz() {
-    start.style.display = "none";
-    myTimer()
-    time = setInterval(myTimer, 1000);
-    showQuestion();
-    quiz.style.display = "block";
+var hr6 = document.querySelector(".hr6").textContent;
+hr6 = parseInt(hr6[0]) + 12;
+console.log(hr6)
 
-}
+var hr7 = document.querySelector(".hr7").textContent;
+hr7 = parseInt(hr7[0]) + 12;
+console.log(hr7)
 
-function checkAnswer(answer){
-    if( answer === questions[currentQuestionIndex].correct){
+var hr8 = document.querySelector(".hr8").textContent;
+hr8 = parseInt(hr8[0]) + 12;
+console.log(hr8)
 
-        score += 5;
-        correctAnswer();
-    }else{
+var hr9 = document.querySelector(".hr9").textContent;
+hr9 = parseInt(hr9[0]) + 12;
+console.log(hr9)
 
-        sec -= 15;
-         wrongAnswer();
-    }
-    count = 0;
-    if(currentQuestionIndex < lastQuestionIndex){
-        currentQuestionIndex++;
-        showQuestion();
-    }else{
+// Selecting the text areas to color code by time
 
-        clearInterval(time);
-        showScore();
-    }
-}
+var text9 = document.querySelector(".text9");
+console.log(text9)
+var text10 = document.querySelector(".text10");
+var text11 = document.querySelector(".text11");
+var text12 = document.querySelector(".text12");
+var text1 = document.querySelector(".text1");
+var text2 = document.querySelector(".text2");
+var text3 = document.querySelector(".text3");
+var text4 = document.querySelector(".text4");
+var text5 = document.querySelector(".text5");
 
+// Color coding the text areas based off the current time
 
-function showScore(){
-    quiz.style.display = "none";
-    start.style.display = "none";
-    topRow.style.display = "none";
-    scoreContainer.style.display = "block";
-    document.getElementById('finalscore').innerHTML = score;
-}
+var currentTime = moment().format('H');
+currentTime = parseInt(currentTime);
+var hours  = [hr1, hr2, hr3, hr4, hr5, hr6, hr7, hr8, hr9];
+var textArea = [text9, text10, text11, text12, text1, text2, text3, text4, text5];
 
-
-function correctAnswer() {
-    var removeAfter = 0;
-        $('#rightorwrong').append("<p>" + 'Right!' + "</p>");
-        removeAfter += 600;
-        (function (removeAfter) {
-            setTimeout(function () {
-                $("#rightorwrong").children().last().remove();
-            }, removeAfter);
-        })(removeAfter);
-    }
-
-
-function wrongAnswer() {
-    var removeAfter = 0;
-        $('#rightorwrong').append("<p>" + 'Wrong!' + "</p>");
-        removeAfter += 600;
-        (function (removeAfter) {
-            setTimeout(function () {
-                $("#rightorwrong").children().last().remove();
-            }, removeAfter);
-        })(removeAfter);
-    }
-
-    addInitials.addEventListener("click", function(event) {
-        event.preventDefault();
-      
-        var initials = document.querySelector("#initials").value;
-        
-        if (initials === "") {
-          alert("Initials cannot be blank");
-
-        } else {
-
-          localStorage.setItem("initials", initials);
-          localStorage.setItem("score", score);
-          showHighscores();
+function colorCode() {
+    for (i = 0; i < hours.length; i ++) {
+        if (hours[i] < currentTime) {
+            textArea[i].classList.add("past");
         }
-        console.log(initials);
-        console.log(score);
+        else if (hours[i] === currentTime) {
+            textArea[i].classList.add("present");
+        }
+        else {
+            textArea[i].classList.add("future");
+        }
+    }
+}
+colorCode();
 
-      });
 
-      function showHighscores() {
-        quiz.style.display = "none";
-        scoreContainer.style.display = "none";
-        thetime.style.display = "none";
-        viewHighscores.style.display = "none";
-        start.style.display = "none";
-        topRow.style.display = "none";
-        highScores.style.display = "block";
-        
-        var initials = localStorage.getItem("initials");
-        var score = localStorage.getItem("score");
-
-        console.log(initials);
-        console.log(score);
-
-        if (initials === null) {
-            console.log('nothing here');
-            $('#highscoreslist').append(" No Highscores Yet! ");
-          } else {
-               $('#highscoreslist').append("<p>", initials + " ............... Score: ", + score, "</p>");
-
-          }
-      }
-
-      clearHighscores.addEventListener("click", function(event) {
-        localStorage.clear();
-        document.getElementById("highscoreslist").innerHTML = "";
-
-      });
-
-      goBack.addEventListener("click", function(event) {
-        event.preventDefault();
-        showQuestion()
-      
-     
-      });
-
-      viewHighscores.addEventListener("click", function(event) {
-            showHighscores()
-                 
-     
-      });
