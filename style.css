@@ -1,34 +1,91 @@
-.time-area {
-    background-color: #4c5f7d;
+.title {
+    margin: 0;
+    padding: 0px;
+    background-color: rgb(13, 189, 57);
     color: white;
-    font-weight: bold;
-    border-bottom: 1px solid white; 
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: right;
-    padding: 10px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 75px;
+    -webkit-text-stroke: 2px white;
 }
 
-.past {
-    background-color: #515761;
-    color: white;
-}
-  
-.present {
-    background-color: lightsteelblue;
-}
-  
-.future {
-    background-color: whitesmoke;
+.other-head {
+    font-family: 'Lobster Two', cursive;
+    font-size: 50px;
 }
 
-#today {
-    font-weight: bold;
+.third-head {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    color: rgb(104, 104, 104)
+}
+ .forecast-banner {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+ }
+
+.current-city {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: rgb(104, 104, 104);
+
 }
 
-.btn {
-    background-color: #4275c7;
-    border-bottom: 1px solid white; 
-    color: white;
+.forecast-day {
+    background-color: rgb(13, 189, 57);
+    color: whitesmoke;
+    margin: 4px;
+    padding: 8px;
+    font-weight: lighter;
+    border-radius: 15px;
+}
 
+.ficon {
+    align-items: center;
+}
+
+.current-condition {
+    margin: 10px;
+    background-color: rgb(241, 241, 241);
+    border: 0px;
+}
+
+input {
+    margin-left: 5px;
+}
+
+button {
+    background-color: rgb(13, 189, 57);
+    border: none;
+    color: whitesmoke;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:active {
+    background-color: rgb(104, 104, 104);
+}
+
+button:hover {
+    background-color: rgb(104, 104, 104);
+}
+
+.list-group-item {
+    background-color: rgb(13, 189, 57);
+    border: none;
+    color: whitesmoke;
+    border-top-left-radius: 5px;
+}
+
+.clear {
+    background-color: rgb(48, 47, 47); }
+
+.clear:active {
+    background-color: rgb(48, 47, 47);
+    border: none; 
+}
+
+.list-group-item:active {
+    background-color: rgb(241, 241, 241);
 }

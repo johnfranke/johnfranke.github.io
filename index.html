@@ -1,118 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" />
-    <title>Work Day Scheduler</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" />
+  <title>Check The Weather</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lobster+Two&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid">
-      <div class="row col-12-md">
-        <div class="jumbotron w-100">
-          <div class="container text-center">
-            <h1 class="display-3">Work Day Scheduler</h1>
-            <p class="lead">A simple calendar app for scheduling your work day</p>
-            <p id="today" class="lead"></p><br>
+  <div class="row mb-5">
+    <div class="col-12 title text-center">
+      <p class="p-4">Check The Weather</p>
+    </div>
+  </div>
+
+  <div class="row ml-3">
+
+    <div class="col-lg-4">
+      <div class="row">
+        <h2 class="ml-4 col-12 other-head">What City?</h2>
+        <div class="ml-5 mb-3 col-12">
+          <input class="the-city" placeholder="Type a city name here"></input>
+          <button class="search">Search</button>
+        </div>
+        <div class="col-1"></div>
+        <h4 class="ml-4 mt-4 col-10 third-head">Your Previous Searches:</h4>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="ml-4 mb-3 col-10">
+          <div class="card border-0">
+            <ul class="list-group list-group-flush previous-searches border-0">
+              <button class='clear mt-1'>Clear History</button>
+            </ul>
           </div>
         </div>
+        <div class="col-1"></div>
       </div>
-
-      <div class="row hour">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr1">9:00 AM</div>
-        <textarea class="col-7 text9"></textarea>
-        <button type="button" class="btn btn-default btn-lg text-center btn9">
-          <span class="btn9"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr2">10:00 AM</div>
-        <textarea class="col-7 text10"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn10">
-          <span class="btn10"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr3">11:00 AM</div>
-        <textarea class="col-7 text11"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn11">
-          <span class="btn11"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr4">12:00 PM</div>
-        <textarea class="col-7 text12"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn12">
-          <span class="btn12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr5">1:00 PM</div>
-        <textarea class="col-7 text1"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn1">
-          <span class="btn1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr6">2:00 PM</div>
-        <textarea class="col-7 text2"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn2">
-          <span class="btn2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr7">3:00 PM</div>
-        <textarea class="col-7 text3"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn3">
-          <span class="btn3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr8">4:00 PM</div>
-        <textarea class="col-7 text4"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn4">
-          <span class="btn4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr9">5:00 PM</div>
-        <textarea class="col-7 text5"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn5">
-          <span class="btn5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-
-
- 
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="moment.js"></script>
-    <script src="script.js"></script>
 
+    <div class="col-lg-7">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 mt-3 mb-3">
+          <div class="card current-condition">
+            <div class="card-body">
+              <h2 class="card-title current-city"></h2>
+              <img class="icon text-center" src="" alt="Weather icon">
+              <p class="card-text current-temp"></p>
+              <p class="card-text current-hum"></p>
+              <p class="card-text current-wind"></p>
+              <p class="card-text current-uv"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-10 mt-5">
+          <p class="forecast-title">5-Day Forecast:</p>
+          <div class="row card-group forecast-days text-center"></div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="moment.min.js"></script>
 </body>
 
 </html>

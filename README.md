@@ -1,9 +1,11 @@
-# Work Day Scheduler
+## Weather Dashboard
 
-# Description
+## Description
 
-This is a work day scheduler. This app allows a user to input text into a certain hour of the day.  The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.). Once text is entered, the user will click the 'save' button and their input will be stored in 'localStorage', allowing the text to persist when the application is refreshed. If the user wants to delete an event, they can by deleting their input and clicking the 'save' button.
+The user is first prompted with the title of the app (Check The Weather) and then asked to input a city into the search bar. Once the user clicks the search button the current conditions of the city they searched will show on the left (or below if smaller screen). Under that a 5 day forecast for that city will also show. 
 
-The current day and time is displayed near the top of the calendar. Also, each timeblock is color coded to indicate whether it is in a past, present, or future hour.
+When the user searches for a city that city will be stored in localStorage and will prepend to their 'previous searches' list under the search bar. The user can refresh the page and their previous searches will still be in their list. If the user would like to they can clear that list by clicking on the 'Clear History' button below the previous searches.
+
+I used html, javascript, css, the OpenWeather API, and the Moment.js library to create a weather dashboard.
 
 You can view the deployed application here: https://johnfranke.github.io/
