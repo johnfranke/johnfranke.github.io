@@ -31,7 +31,7 @@ $(".search").on("click", function() {
         $(".current-condition").show();
         $(".forecast-title").show();
         var iconcode = response.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
         $(".icon").attr('src', iconurl)
         lat = response.coord.lat;
         lon = response.coord.lon;
