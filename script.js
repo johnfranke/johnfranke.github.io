@@ -40,7 +40,7 @@ $(".search").on("click", function() {
         $(".current-temp").text("Temperature: " + currentTemp.toFixed(1) + " °F");
         $(".current-hum").text("Humidity: " + response.main.humidity + "%");
         $(".current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=49972f5423544d7ddb0bdd76f3805d92&lat=" + lat + "&lon=" + lon;
+        queryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?&appid=49972f5423544d7ddb0bdd76f3805d92&lat=" + lat + "&lon=" + lon;
         //This call gets the UV index using the longitude and lattitude from the previous one
         $.ajax({
             url: queryURL,
