@@ -62,7 +62,7 @@ $(".search").on("click", function() {
                 var forecastdatedisplay = forecastdate.charAt(5) + forecastdate.charAt(6) + "/" + forecastdate.charAt(8) + forecastdate.charAt(9) +
                 "/" + forecastdate.charAt(0) + forecastdate.charAt(1) + forecastdate.charAt(2) + forecastdate.charAt(3);
                 var fcIcon = forecastTimes[i].weather[0].icon;
-                var fcIconURL = "http://openweathermap.org/img/w/" + fcIcon + ".png";
+                var fcIconURL = "https://openweathermap.org/img/w/" + fcIcon + ".png";
                 var fcTemp = forecastTimes[i].main.temp * (9/5) - 459.67;
                 var fcHumidity = forecastTimes[i].main.humidity;
                 if (forecastdisplay === false || forecastdisplay === undefined) {
