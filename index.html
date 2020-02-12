@@ -1,117 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" />
-    <title>Work Day Scheduler</title>
+    <meta charset="UTF-8">
+    <title>John Franke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
-<body>
-    <div class="container-fluid">
-      <div class="row col-12-md">
-        <div class="jumbotron w-100">
-          <div class="container text-center">
-            <h1 class="display-3">Work Day Scheduler</h1>
-            <p class="lead">A simple calendar app for scheduling your work day</p>
-            <p id="today" class="lead"></p><br>
-          </div>
-        </div>
-      </div>
-
-      <div class="row hour">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr1">9:00 AM</div>
-        <textarea class="col-7 text9"></textarea>
-        <button type="button" class="btn btn-default btn-lg text-center btn9">
-          <span class="btn9"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr2">10:00 AM</div>
-        <textarea class="col-7 text10"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn10">
-          <span class="btn10"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr3">11:00 AM</div>
-        <textarea class="col-7 text11"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn11">
-          <span class="btn11"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr4">12:00 PM</div>
-        <textarea class="col-7 text12"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn12">
-          <span class="btn12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr5">1:00 PM</div>
-        <textarea class="col-7 text1"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn1">
-          <span class="btn1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr6">2:00 PM</div>
-        <textarea class="col-7 text2"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn2">
-          <span class="btn2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr7">3:00 PM</div>
-        <textarea class="col-7 text3"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn3">
-          <span class="btn3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr8">4:00 PM</div>
-        <textarea class="col-7 text4"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn4">
-          <span class="btn4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-      <div class="row hour col-12-md">
-        <div class="col-1">
-        </div>
-        <div class="col-2 time-area hr9">5:00 PM</div>
-        <textarea class="col-7 text5"></textarea>
-        <button type="button" class="btn btn-default btn-lg btn5">
-          <span class="btn5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
-        </button>
-      </div>
-
-
- 
+<body class="body">
+    <div class="row col-md-12 header">
+        <p class="name">john franke</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="moment.js"></script>
-    <script src="script.js"></script>
+    <div class="row navbar justify-content-end p-0">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" id="about" href="#">about</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="portfolio" href="#">portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact" href="#">contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="resume" href="./johnfrankeresume.pdf" target="_blank">resume</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row col-12 m-0 p-0" id="about-section">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10 content"><img id="profile-pic" src="profilepic.png">
+            <p class="title">ABOUT</p>
+            <p class="content-bold">I am a full-stack developer</p>
+            <br>
+            <h5 class="content-text">My name is John Franke, I am a full stack developer. I'm currently enrolled in the University of Kansas developer bootcamp. I will graduate in May 2020. I am proficient in HTML, CSS, Javascript, and Node.js. Since my passion has always been developing, I'm enthusiastic about starting my career as a developer.
+                
+                In my free time, when I'm not coding or designing, I enjoy spending time with my family, friends, and traveling to new places. 
+            </h5>
+
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+
+    <div class="row col-12 m-0 p-0" id="portfolio-section">
+        <div class="col-md-10 content">
+            <p class="title text-right">PORTFOLIO</p>
+            <p class="content-bold">A look at some of my work...</p>
+            <br>
+            <div class="card-deck">
+                <div class="card">
+                  <img src="./port-beerme.png" class="card-img-top" alt="Beer Me">
+                  <div class="card-body">
+                    <h5 class="card-title">Beer Me</h5>
+                    <p class="card-text">An app to find the top 10 breweries near you.</p>
+                    <a class="card-title" href="https://ajmyers5.github.io/Group-666/" target="_blank">Deployed Version</a>
+                    <br>
+                    <a href="https://github.com/ajmyers5/Group-666" target="_blank">GitHub Repository</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./port-scheduler.png" class="card-img-top" alt="Workday Scheduler">
+                  <div class="card-body">
+                    <h5 class="card-title">Workday Scheduler</h5>
+                    <p class="card-text">Schedule your day with this workday scheduler.</p>
+                    <a class="card-title" href="https://johnfranke.github.io/Workday-Scheduler/" target="_blank">Deployed Version</a>
+                    <br>
+                    <a href="https://github.com/johnfranke/Workday-Scheduler" target="_blank">GitHub Repository</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./port-weather.png" class="card-img-top" alt="Weather App">
+                  <div class="card-body">
+                    <h5 class="card-title">Weather Dashboard</h5>
+                    <p class="card-text">Type in a city and see current conditions and a 5 day forecast.</p>
+                    <a class="card-title" href="https://johnfranke.github.io/Weather-Dashboard/" target="_blank">Deployed Version</a>
+                    <br>
+                    <a href="https://github.com/johnfranke/Weather-Dashboard" target="_blank">GitHub Repository</a>
+                  </div>
+                 </div>
+              </div>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    <div class="row col-12 m-0 p-0" id="contact-section">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-10 content">
+            <p class="title">CONTACT</p>
+            <p class="content-contact">Email Address: JohnRFrankeJr@gmail.com</p>
+            <p class="content-contact">Phone Number: (816) 589-8509</p>
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-light d-flex justify-content-center footer">
+        <a href="https://github.com/johnfranke" target="_blank"><img class="logos" src="./logo-github.png"></a>&nbsp;<a href="https://www.linkedin.com/in/john-franke-a368b51a1/" target="_blank"><img class="logos" src="logo-linkedin.png"></a>
+      </nav>
+
+    
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="script.js"></script>
 
 </body>
 

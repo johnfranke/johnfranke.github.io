@@ -1,9 +1,7 @@
-# Work Day Scheduler
+### Portfolio Update
 
-# Description
+I updated my portfolio to an original design using HTML, CSS, and javascript. It is a mobile-first design with a list of projects with links to the deployed version and GitHub repositories along with a screenshot of the applications. I also added links to my LinkedIn, GitHub, and resume.
 
-This is a work day scheduler. This app allows a user to input text into a certain hour of the day.  The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.). Once text is entered, the user will click the 'save' button and their input will be stored in 'localStorage', allowing the text to persist when the application is refreshed. If the user wants to delete an event, they can by deleting their input and clicking the 'save' button.
+### Updated LinkedIn, GitHub Profile and Resume 
 
-The current day and time is displayed near the top of the calendar. Also, each timeblock is color coded to indicate whether it is in a past, present, or future hour.
-
-You can view the deployed application here: https://johnfranke.github.io/
+Updatedl my LinkedIn Profile with a strong bio statement, a professional photo, and links to my Github and portfolio. I updated my GitHub profile picture, bio, location and a link to my portfolio. I also pinned some repos that I want to highlight. Along with the LinkedIn and GitHub profiles, I updated my resume tailed to the type of job I'm looking for.

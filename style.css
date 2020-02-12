@@ -1,34 +1,153 @@
-.time-area {
-    background-color: #4c5f7d;
-    color: white;
-    font-weight: bold;
-    border-bottom: 1px solid white; 
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: right;
-    padding: 10px;
+.body {
+    background-color: #ffffff;
+    background-image: url(./topography.png);
 }
 
-.past {
-    background-color: #515761;
+.header {
+    font-size: 12vw;
+    color: rgb(0, 140, 255);
+    padding: 0px 0px 0px 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+}
+
+.header:hover {
+    transition: all 1s ease-in-out;
+    transform: scale(1.05);
+}
+
+.navbar {
+    width: 100%;
+    font-size: 4vw;
+    color: #222222;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: -40px;
+}
+
+.nav-link {
+    color: #222222;
+}
+.content {
+    display: inline-block;
+    background-color: #222222;
+    width: 100%;
+    color: white;
+    margin: 40px 0px 0px 0px;
+    padding: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 2px 2px 10px #888888;
+}
+
+.content:hover {
+    /* border: opx solid rgb(0, 140, 255);
+    box-shadow: 0 0 25px rgb(0, 140, 255); */
+    transition: all 1s ease;
+    transform: scale(1.02);
+}
+
+.title {
+    font-size: 2.5vw;
+    color: rgb(223, 223, 223);
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-bold {
+    font-size: 4vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-bold:hover {
+    transition: all 1s ease;
+    transform: scale(1.02);
+}
+
+.content-contact {
+    font-size: 2.5vw;
+    font-family: 'Roboto', sans-serif;
+}
+.content-contact:hover {
+    transition: all 1s ease;
+    transform: scale(1.02);
+}
+
+.content-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    display: inline-block;
+    background-color:  rgb(0, 140, 255);
+    width: 100%;
+    color: white;
+    margin: 40px 0px 0px 0px;
+    padding: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:hover {
+    color: rgb(0, 140, 255);
+    transition: all .5s ease;
+    transform: scale(1.04);
+}
+
+.card {
+    background-color: rgb(72, 72, 73);
+    border-radius: 0px;
+    border: 0px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    scale: 80%;
+}
+.card:hover {
+    transition: all 1s ease;
+    transform: scale(1.04);
+}
+
+.card-img-top {
+    border-radius: 0px;
+}
+
+.card-text {
+    color: rgb(177, 177, 177);
+}
+
+.port-link {
+    background-color: rgb(0, 140, 255);
+    font-family: 'Roboto Condensed', sans-serif;
     color: white;
 }
+.footer-link {
+    color: white;
+}
+#profile-pic {
+    float: bottom;
+    float: right;
+    margin: 25px;
+}
+#profile-pic:hover {
+    transition: all 1s ease;
+    transform: scale(1.1);
+}
+.logos:hover {
+    transition: all 1s ease;
+    transform: scale(1.2);
+}
+
+
+
+/* for portfolio images make them bigger on hover */
+/* div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; 
+    -webkit-transition-duration: 2s; 
+    transition-property: width;
+    transition-duration: 2s;
+  }
   
-.present {
-    background-color: lightsteelblue;
-}
-  
-.future {
-    background-color: whitesmoke;
-}
-
-#today {
-    font-weight: bold;
-}
-
-.btn {
-    background-color: #4275c7;
-    border-bottom: 1px solid white; 
-    color: white;
-
-}
+  div:hover {
+    width: 300px;
+  } */
