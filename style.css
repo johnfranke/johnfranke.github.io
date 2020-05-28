@@ -3,6 +3,37 @@
     background-image: url(./topography.png);
 }
 
+.stripe {
+    height: 100%;
+    position: absolute;
+}
+  
+.stripe::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    top: 80vh;
+    height: 100%;
+    transform: skewY(-12deg);
+    background-color: rgb(0, 140, 255);
+}
+.stripe2 {
+    height: 100%;
+    position: absolute;
+}
+  
+.stripe2::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    top: 200vh;
+    height: 40%;
+    transform: skewY(-12deg);
+    background-color: rgb(0, 140, 255);
+}
+
 .header {
     font-size: 12vw;
     color: rgb(0, 140, 255);
